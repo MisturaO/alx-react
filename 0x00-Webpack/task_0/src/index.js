@@ -1,6 +1,5 @@
 import $ from "jquery";
 
-
 /*imports jquery and add three different paragraphs to the page body when the DOM is ready*/
 $( function() {
     $('body').append('<p>Holberton Dashboard</p>');
