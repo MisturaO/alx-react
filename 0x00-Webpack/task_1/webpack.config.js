@@ -4,6 +4,7 @@
 const path = require('path'); //used to specify the path for the output.
 
 module.exports = {
+    mode: 'production',
     entry: {
         main: path.resolve(__dirname, './js/dashboard_main.js'), //Webpack entry point file.
     },
