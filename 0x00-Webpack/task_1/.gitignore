@@ -1,4 +1,4 @@
 node_modules
-/dist/bundle.js
-/dist/*LICENSE*
+/public/bundle.js
+/public/*LICENSE*
 package-lock.json
