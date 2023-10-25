@@ -5,20 +5,20 @@ Bind the debounce function in Lodash to the click event on the button:
 */
 
 
-import jQuery from "jquery";
+import $ from "jquery";
 import _ from 'lodash';
 
-jQuery('body').append("<p>Holberton Dashboard</p>");
-jQuery('body').append("<p>Dashboard data for the students</p>");
-jQuery('body').append("<button>Click here to get started</button>");
-jQuery('body').append("<p id='count'></p>");
-jQuery('body').append("<p>Copyright - Holberton School</p>");
+$('body').append("<p>Holberton Dashboard</p>");
+$('body').append("<p>Dashboard data for the students</p>");
+$('body').append("<button>Click here to get started</button>");
+$('body').append("<p id='count'></p>");
+$('body').append("<p>Copyright - Holberton School</p>");
 
 let count = 0;
 
 function updateCounter(){
     count++;
-    jQuery('#count').html(`${count} clicks on the button`);
+    $('#count').html(`${count} clicks on the button`);
 };
 
 
@@ -26,4 +26,4 @@ function updateCounter(){
 const debounceDelay = 1000;
 
 /* Binds the debounce function to the click event */
-jQuery('button').on('click', _.debounce(updateCounter, debounceDelay));
+$('button').on('click', _.debounce(updateCounter, debounceDelay));
