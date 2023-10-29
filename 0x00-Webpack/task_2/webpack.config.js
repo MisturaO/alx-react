@@ -13,6 +13,7 @@ module.exports = {
     },
     performance: {
         hints: false,
+        maxAssetSize: 512000,
     },
     module: {
         rules: [
