@@ -12,8 +12,8 @@ module.exports = {
         path: path.resolve(__dirname, 'public') // The output file will be stored in the 'public' folder.
     },
     performance: {
-        hints: true,
-        maxAssetSize: 512000,
+        maxEntrypointSize: 1000000,
+        maxAssetSize: 1000000,
     },
     module: {
         rules: [
