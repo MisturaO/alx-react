@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, 'public') // The output file will be stored in the 'public' folder.
     },
     performance: {
-        hints: false,
+        hints: true,
         maxAssetSize: 512000,
     },
     module: {
