@@ -6,25 +6,10 @@ package-lock.json
 
 
 # module
-public
 
 
 # files
 dashboard/README.md
-src/175b85183ecedb529e14.jpg 
-src/e240f8157634d33a9757 (1).ico
-src/index.js
-src/logo.svg
-src/reportWebVitals.js
-src/setupTests.js
-src/Notifications.js
-src/index.js
-src/reportWebVitals.js   
-src/utils.js
-src/App.css
-src/Notifications.css   
-src/logo.svg
-src/setupTests.js
 
 # dependencies
 /node_modules
