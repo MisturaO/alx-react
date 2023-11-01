@@ -1,6 +1,6 @@
-import {getFullYear, getFooterCopy, getLatestNotification} from './utils';
+/* Tests for utilility(utils.js) functions with the jest library*/
 
-/* Test utils functions with the jest library*/
+import {getFullYear, getFooterCopy, getLatestNotification} from './utils';
 
 
 

@@ -6,13 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
- // This is how to render react component in DOM
-const rootNotifications = ReactDOM.createRoot(document.getElementById('root-notifications'));
-rootNotifications.render(
-  <React.StrictMode>
-    <Notifications />
-  </React.StrictMode>
-  );
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +14,15 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+
+ // This is how to render react component in DOM
+ const rootNotifications = ReactDOM.createRoot(document.getElementById('root-notifications'));
+ rootNotifications.render(
+   <React.StrictMode>
+     <Notifications />
+   </React.StrictMode>
+   );
 
 
 
