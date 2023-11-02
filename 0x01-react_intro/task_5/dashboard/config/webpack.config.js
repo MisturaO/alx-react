@@ -26,7 +26,19 @@ module.exports = {
           },
           {
             test: /\.(png|svg|jpg|gif)$/,
-            use: 'file-loader',
+            use: [
+              'file-loader',
+              {
+                loader: 'image-webpack-loader', // For image optimization.
+                options: {
+                  mozjpeg: {
+                    progressive: true,
+                    quality: 65,
+                  },
+                  // Add more image optimization options as needed
+                },
+              },
+            ]
           },
         ],
       },
