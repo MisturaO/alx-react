@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
-import Notifications from './Notifications';
-import App from './App';
+// import './App/App.css';
+import Notifications from './Notifications/Notifications';
+import App from './App/App';
 // import reportWebVitals from './reportWebVitals';
 
 
