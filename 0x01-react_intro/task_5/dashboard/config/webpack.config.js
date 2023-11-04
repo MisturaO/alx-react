@@ -2,12 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: {
-        main: path.resolve(__dirname, '/src/index.js'), // here's absolute path to the entry point file
-      },
+    entry: './src/index.js',
+    /*{
+        //  main: path.resolve(__dirname, './src/index.js'), // here's absolute path to the entry point file
+      },*/
       output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, '../dist') // I used the relative path (../) because the dist directory is one dir up from here.
+        //  path: path.resolve(__dirname, '../dist') // I used the relative path (../) because the dist directory is one dir up from here.
       },
       mode: 'development',
       plugins: [
@@ -29,6 +30,7 @@ module.exports = {
             use: [
                 'file-loader',
                 {
+                    // This will optimize images loaded by file-loader
                     loader: 'image-webpack-loader',
                     options: {
                       mozjpeg: {
@@ -40,7 +42,18 @@ module.exports = {
                 },
             ],
           },
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader'
+            }
+          }
         ],
+      },
+      resolve: {
+        extensions: [".js", ".jsx"],
+        modules: ['src', 'node_modules'],
       },
       devtool: 'inline-source-map', // Enable inline source maps
 };
