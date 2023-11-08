@@ -2,7 +2,6 @@ import React from 'react';
 import './Notifications.css'
 import {getLatestNotification} from '../utils/utils.js';
 import closeIcon from '../close-icon.png';
-import NotificationItem from './NotificationItem.js';
 
 
 export default function Notifications(){
@@ -18,7 +17,9 @@ export default function Notifications(){
         fontWeight: "bold",
         fontSize: "15px",
     };
-
+    const notiButtonStyle = {
+        color: 'red',
+    }
     return (
         <>
             <div className='Notifications' style={ buttonStyle }>
@@ -27,13 +28,9 @@ export default function Notifications(){
                 </button>
                 <p>Here is the list of notifications</p>
                 <ul>
-                    {/* Replaces the <li> tags with NotificationItem components. */}
-                    <NotificationItem type="default" value="New course available" />
-                    <NotificationItem type="urgent" value="New resume available"/>
-                    <NotificationItem type="urgent" html={getLatestNotification()} />
-                    {/* <li data="default">New course available</li>
+                    <li data="default">New course available</li>
                     <li data="urgent"> New resume available</li>
-                    <li data="urgent" dangerouslySetInnerHTML={{ __html: getLatestNotification() }}></li> */}
+                    <li data="urgent" dangerouslySetInnerHTML={{ __html: getLatestNotification() }}></li>
                 </ul>
             </div>
         </>
