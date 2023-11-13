@@ -1,15 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
-
+console.log(path.resolve(__dirname, '../dist'));
 module.exports = {
-    entry: './src/index.js',
+    entry: path.resolve(__dirname, '../src/index.js'),
     /*{
         //  main: path.resolve(__dirname, './src/index.js'), // here's absolute path to the entry point file
       },*/
       output: {
         filename: 'bundle.js',
+        clean: true,
         // Webpack bundles into the dist folder by default. That's why i didn't specify the folder to bundle output into. 
-        //  path: path.resolve(__dirname, '../dist') // I used the relative path (../) because the dist directory is one dir up from here.
+         path: path.resolve(__dirname, '../dist') // I used the relative path (../) because the dist directory is one dir up from here.
       },
       mode: 'development',
       plugins: [
@@ -27,21 +28,12 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: [
-                'file-loader', //Now in the new update we can just specify "asset/resource" and we don't need to use "image-webpack-loader" for optimization, because asset/resource will do it's job too 
-                {
-                    // This will optimize images loaded by file-loader
-                    loader: 'image-webpack-loader',
-                    options: {
-                      mozjpeg: {
-                        progressive: true,
-                        quality: 65,
-                      },
-                      // Add more image optimization options as needed
-                    },
-                },
-            ],
+            test: /\.(png|jpg|gif)$/,
+            type: 'asset/resource',
+          },
+          {
+            test: /\.(svg)$/,
+            type: 'asset/inline',
           },
           {
             test: /\.js$/,
@@ -52,9 +44,9 @@ module.exports = {
           }
         ],
       },
-      resolve: {
-        extensions: [".js", ".jsx"],
-        modules: ['src', 'node_modules'],
-      },
+      // resolve: {
+      //   extensions: [".js", ".jsx"],
+      //   modules: ['src', 'node_modules'],
+      // },
       devtool: 'inline-source-map', // Enable inline source maps
 };

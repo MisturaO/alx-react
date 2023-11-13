@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CourseListRow({isHeader, textFirstCell, textSecondCell}){
+function CourseListRow({isHeader, textFirstCell, textSecondCell}){//Child component whose props data types are set through the Parent Component's prop
     // Using ternary operator to conditionally render the elements based on the values of 'isHeader'. Also nested conditions with 'textSecondCell'
     return (
     <>

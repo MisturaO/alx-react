@@ -6,7 +6,7 @@ import App from './App/App';
 // import reportWebVitals from './reportWebVitals';
 
 
-
+console.log(document.getElementById('root'))
 // Rendering react component in DOM
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

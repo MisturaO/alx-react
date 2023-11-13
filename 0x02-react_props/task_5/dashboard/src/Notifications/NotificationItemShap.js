@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 */
 
 
-const NotificationItemShape = PropTypes.shapes({
+const NotificationItemShape = PropTypes.shape({
     id: PropTypes.number.isRequired,
     html: PropTypes.shape({ //A html (object of { \_\_html: string })
         __html: PropTypes.string
