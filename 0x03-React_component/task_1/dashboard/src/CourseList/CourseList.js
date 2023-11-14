@@ -2,7 +2,7 @@ import React from 'react';
 import CourseListRow from './CourseListRow';
 import "./CourseList.css";
 import PropType from 'prop-types'//import prop-types to use the shape here
-import CourseShape from './CourseShape';//the shape created
+import CourseShape from './CourseShape';//the shape createdd
 
 
 function CourseList({listCourses = []}) {//Parent component where shape(data type declaration) will be given to the child component's props values(to make sure we are setting the expected data types to the props e.g textafairstCell is expecting a string) and sets condition for how it will be rendered in the Ui
