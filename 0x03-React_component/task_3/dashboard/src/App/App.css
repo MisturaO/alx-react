@@ -1,0 +1,27 @@
+.App {
+  height: 100vh;
+  max-width: 100vw;
+  font-family: Arial, Helvetica, poppins;
+  box-sizing: border-box;
+}
+
+
+/* .App-body form label {
+  margin-right: 10px; /* Add right margin to create spacing 
+}
+
+.App-body form button {
+  margin-right: 10px;  Add right margin to create spacing 
+} */
+
+
+
+/* .App-header::after {
+  content: "";
+  border-top: 3px solid #e0354b;
+  position: absolute;
+  top: 34rem;
+  width: 99%;
+   margin-top: 14%;
+} 
+*/
