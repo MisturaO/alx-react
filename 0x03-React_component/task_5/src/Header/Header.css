@@ -1,0 +1,21 @@
+/* APP HEADER
+  ================================== */
+  .App-header {
+    display: flex;
+    color: #e0354b;
+    align-items: center;
+    border-bottom: 3px solid #e0354b;
+    font-size: 1.4rem;
+    margin-bottom: 300px;
+    margin-top: 14%;
+  }
+  
+  .App-header img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
