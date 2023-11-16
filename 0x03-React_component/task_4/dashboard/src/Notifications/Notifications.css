@@ -1,0 +1,13 @@
+div {
+    border: 1px;
+    margin: 2px solid red;
+
+}
+
+li[data="default"] {
+    color: blue;
+}
+
+li[data="urgent"] {
+    color: red;
+}
