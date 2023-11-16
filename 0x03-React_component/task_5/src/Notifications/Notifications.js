@@ -13,6 +13,15 @@ export default class Notifications extends Component{
         super(props)
         this.markAsRead = this.markAsRead.bind(this); //Binds the function markAsRead in the constructor to avoid unecessary re-rendering
     }
+
+    shouldComponentUpdate(nextProps) {
+        //Only update if the value of the prop 'listNotifications' has changed
+        if(this.listNotifications.length !== nextProps.length){
+            return true;
+        }
+        // By default, return false to skip unnecessary updates
+        return false;
+    }
     //Css for the div notiication box
     buttonStyle = {
         justifyContent: 'space-between',
@@ -33,7 +42,7 @@ export default class Notifications extends Component{
         console.log(`Notification ${id} has been marked as read`);
     }
     render(){
-        const { displayDrawer, listNotifications } = this.props //assigning both props to the class instances through destructuring assignment
+        const { buttonStyle, displayDrawer, listNotifications, notiButtonStyle } = this.props //assigning both props to the class instances through destructuring assignment
 
     return (
        
@@ -47,8 +56,8 @@ export default class Notifications extends Component{
                     <p>Here is the list of notifications</p>
                
                     {listNotifications.length > 0 ? (
-                    listNotifications.map(({id, html, type, value}) => {
-                        <NotificationItem markAsRead={this.markAsRead} key={id} type={type} value={value} html={html} style={notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
+                    listNotifications.map(({id, __html, type, value}) => {
+                        <NotificationItem markAsRead={this.markAsRead()} key={id} type={type} value={value} html={__html} style={notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
                     })) : (
                         <CourseListRow textFirstCell='No new notification for now'/>
                     )}
