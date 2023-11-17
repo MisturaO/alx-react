@@ -49,7 +49,7 @@ export default class Notifications extends Component{
         <>
             <div className={css(notificationPanel.menueItem)}>Your notifications</div>
             <ul>
-                {displayDrawer ? <div className={css(notificationPanel.NotificationsList)} style={ buttonStyle }>
+                {displayDrawer ? <div style={ buttonStyle }>
                     <button aria-label="Close" onClick={ () => console.log("Close button has been clicked")} style={{position: "absolute", left: "69em", margin: "auto", background: "none", border: "none", top: "1em"}}>
                         <img src={closeIcon} alt="close icon" width="10px"  />
                     </button>
@@ -57,7 +57,7 @@ export default class Notifications extends Component{
                
                     {listNotifications.length > 0 ? (
                     listNotifications.map(({id, __html, type, value}) => {
-                        <NotificationItem className={css(notificationPanel.NotificationItemList)} markAsRead={this.markAsRead()} key={id} type={type} value={value} html={__html} style={notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
+                        <NotificationItem markAsRead={this.markAsRead()} key={id} type={type} value={value} html={__html} style={notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
                     })) : (
                         <CourseListRow textFirstCell='No new notification for now'/>
                     )}
@@ -93,11 +93,5 @@ const notificationPanel = StyleSheet.create({
         border: '1px',
         margin: '2px solid red'
     
-    },
-    NotificationsList: {
-        color: 'blue'
-    },
-    NotificationItemList: {
-        color: 'red'
     }
 });
