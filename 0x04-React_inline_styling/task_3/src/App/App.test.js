@@ -3,7 +3,7 @@
  */
 //The above is used to indicate to Node.js the environment this test will be run in
 import '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 import React from 'react';
 // import { shallow } from 'enzyme';
 import App from './App'; //imports the React 'App' component to test

@@ -20,8 +20,11 @@ class NotificationItem extends PureComponent {
             NOTE: We are checking just one <li> element but had to split it to give it separate error checks:
                 <li data-notification-type={type} dangerouslySetInnerHTML={{ __html: html }}>{value}</li>
             */}
-             {type && value ?  <li className={type === 'default' ? css(styles.defaultList) : css(styles.urgentList)} onClick={() => markAsRead(id)} data-notification-type={type} style={style} >{value}</li> : null}
-            {html ? <li data-testid="Mytest" dangerouslySetInnerHTML={{ __html: html }} onClick={() => markAsRead(id)}></li> : null}
+             {type && value ?  <li className={type === 'default' ? css(styles.defaultList, styles.smallBorder) 
+             : css(styles.urgentList, styles.smallBorder)} 
+             onClick={() => markAsRead(id)} data-notification-type={type} style={style} >{value}</li> : null}
+            {html ? <li data-testid="Mytest" dangerouslySetInnerHTML={{ __html: html }} onClick={() => markAsRead(id)}>
+            </li> : null}
         </>
     );
     }
@@ -57,11 +60,16 @@ const styles = StyleSheet.create({
     small: {
         '@media (max-width: 900px)': {
             width: '100%',
-            borderBottom: '1px solid black',
+            // borderBottom: '1px solid black',
             fontSize: '20px',
-            padding: '10px. 8px'
+            padding: '10px. 8px',
+        }
+    },
+    smallBorder: {
+        '@media (max-width: 900px)': {
+            borderBottom: '1px solid black',
         }
     }
-})
+});
 
 export default NotificationItem;

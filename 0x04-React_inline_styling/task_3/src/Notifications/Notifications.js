@@ -22,6 +22,7 @@ export default class Notifications extends Component{
         // By default, return false to skip unnecessary updates
         return false;
     }
+    
     //Css for the div notiication box
     buttonStyle = {
         justifyContent: 'space-between',
@@ -43,23 +44,25 @@ export default class Notifications extends Component{
     }
     render(){
         const { buttonStyle, displayDrawer, listNotifications, notiButtonStyle } = this.props //assigning both props to the class instances through destructuring assignment
-
+        
     return (
        
         <>
             <div className={css(notificationPanel.menueItem)}>Your notifications</div>
             <ul>
-                {displayDrawer ? <div className={css(notificationPanel.NotificationsList, notificationPanel.small)} style={ buttonStyle }>
-                    <button aria-label="Close" onClick={ () => console.log("Close button has been clicked")} style={{position: "absolute", left: "69em", margin: "auto", background: "none", border: "none", top: "1em"}}>
+                {displayDrawer ? <div className={css(notificationPanel.NotificationsBlue, notificationPanel.small)} style={ buttonStyle }>
+                    <button aria-label="Close" onClick={ () => console.log("Close button has been clicked")} style={{position: "absolute", left: "60em", margin: "auto", background: "none", border: "none", top: "1em"}}>
                         <img src={closeIcon} alt="close icon" width="10px"  />
                     </button>
-                    <p>Here is the list of notifications</p>
+                    <p className={css(notificationPanel.smallBorder)}>Here is the list of notifications</p>
                
                     {listNotifications.length > 0 ? (
                     listNotifications.map(({id, __html, type, value}) => {
-                        <NotificationItem className={css(notificationPanel.NotificationItemList)} markAsRead={this.markAsRead()} key={id} type={type} value={value} html={__html} style={notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
-                    })) : (
-                        <CourseListRow textFirstCell='No new notification for now'/>
+                        return <NotificationItem className={css(notificationPanel.NotificationItemRed, notificationPanel.smallBorder)} 
+                          markAsRead={this.markAsRead()} key={id} type={type} value={value} html={__html} 
+                          style={this.props.notiButtonStyle}/>//Passing expected data types(prop-types)values to child component's props to make sure the props get the right data type values they are defined for(e.g. type is expecting a string and it's values should be a string which has been defined by shape in the NotificationItemShape file) through this parent's prop(listNotifications)
+                      })) : (
+                        <CourseListRow textFirstCell='No new notification for now' />
                     )}
                     {/* Replaces the <li> tags with NotificationItem components. */}
                     {/* <NotificationItem type="default" value="New course available" style={notiButtonStyle} />
@@ -94,17 +97,27 @@ const notificationPanel = StyleSheet.create({
         margin: '2px solid red'
     
     },
-    NotificationsList: {
+    NotificationsBlue: {
         color: 'blue'
     },
-    NotificationItemList: {
+    NotificationItemRed: {
         color: 'red'
     },
 
     small: {
         '@media (max-width: 900px)': {
             display: 'flex',
-            fontSize: '20px'
+            flexDirection: 'column',
+            // fontSize: '20px',
+            width: 'vw',
+            fontSize: '2rem',
+            // borderBottom: '1px solid black'
+
+        }
+    },
+    smallBorder: {
+        '@media (max-width: 900px)': {
+            borderBottom: '1px solid black'
         }
     }
 });

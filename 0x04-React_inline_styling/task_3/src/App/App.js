@@ -26,7 +26,7 @@ class App extends Component {// The GrandParent component, that renders all Pare
     listNotifications = [ //Values to be received by the Parent(Notifications) component, for the Grandchild's component(NotificationsItem)
       {id: 1, type: "default", value: "New course available"},
       {id: 2, type:"urgent", value:"New resume available"},
-      {id: 2, type:"urgent", html: getLatestNotification()}
+      {id: 3, type:"urgent", html: getLatestNotification()}
     ];
 
   handleKeyDown = (event) => { //event handler
