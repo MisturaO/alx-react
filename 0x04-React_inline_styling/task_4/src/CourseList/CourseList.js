@@ -10,7 +10,7 @@ function CourseList({listCourses=[]}) {//Parent component where shape(data type 
         <thead>
             {listCourses.length > 0 ? (
                 listCourses.map(({id, name, credit}) => {
-                <CourseListRow key={id} textFirstCell={name} textSecondCell={credit}/>
+                return <CourseListRow key={id} textFirstCell={name} textSecondCell={credit}/>
             })
             )
             : (<CourseListRow textFirstCell='No course available yet'/>

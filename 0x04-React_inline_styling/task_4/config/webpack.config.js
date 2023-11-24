@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin')
-console.log(path.resolve(__dirname, '../dist'));
+// const TerserPlugin = require('terser-webpack-plugin')
+// console.log(path.resolve(__dirname, '../dist'));
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.js'),
     /*{
         //  main: path.resolve(__dirname, './src/index.js'), // here's absolute path to the entry point file
       },*/
-      output: {
+    output: {
         filename: 'bundle.js',
         clean: true,
         // Webpack bundles into the dist folder by default. That's why i didn't specify the folder to bundle output into. 
@@ -51,13 +51,13 @@ module.exports = {
       // },
       devtool: 'inline-source-map', // Enable inline source maps
 
-      optimization: {
-        minimizer: [new TerserPlugin({
-          terserOptions: {
-            output: {
-              comments: false, // This will remove comments
-            },
-          },
-        })],
-      },
+      // optimization: {
+      //   minimizer: [new TerserPlugin({
+      //     terserOptions: {
+      //       output: {
+      //         comments: false, // This will remove comments
+      //       },
+      //     },
+      //   })],
+      // },
 };
