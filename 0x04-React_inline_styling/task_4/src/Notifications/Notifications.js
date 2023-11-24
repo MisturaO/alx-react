@@ -37,7 +37,7 @@ export default class Notifications extends Component{
 
 
     shouldComponentUpdate(nextProps, nextState) {
-        //Only update the UI if the props (listNotifications, displayDrawer) and state(isVisible) has changed.
+        //Only update the UI if the props (listNotifications, displayDrawer) or the state(isVisible) values has changed.
         if(
             this.props.listNotifications.length !== nextProps.listNotifications.length ||
             this.props.displayDrawer !== nextProps.displayDrawer ||
