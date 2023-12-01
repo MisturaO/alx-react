@@ -1,4 +1,4 @@
-const { fromJS } = require('immutable');
+import { fromJS } from 'immutable';
 
 
 /*function getImmutableObject that accepts object as a parameter and converts 
