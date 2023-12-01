@@ -3,10 +3,10 @@ import { Map } from 'immutable';
 //This function returns the value of the object at the defined path
 export default function accessImmutableObject(object, array) {
     // convert 'object' to immutable object
-    const immutableObject = Map(object);
+  const immutableObject = Map(object);
 
     // Used the `getIn` method to access the value at the defined path
-    return immutableObject.getIn(array, undefined);
+  return immutableObject.getIn(array, undefined);
 };
 
 // USAGE:
