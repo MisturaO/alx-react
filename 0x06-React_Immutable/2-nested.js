@@ -6,7 +6,7 @@ export default function accessImmutableObject(object, array) {
   const immutableObject = Map(object);
 
     // Used the `getIn` method to access the value at the defined path
-  return immutableObject.getIn(array, undefined);
+  return immutableObject.getIn(array);
 };
 
 // USAGE:
@@ -15,6 +15,6 @@ export default function accessImmutableObject(object, array) {
 //          first: "Guillaume",
 //          last: "Salva"
 //     }
-// }, ['name', 'first']); // The second argument specifies the path of the data the getIn method will traverse to get it's value
+// }, ['name', 'first']); // The second argument specifies the path of the data the getIn method will traverse to get it's value. returns 'undefined' if path doesn't exist.
 
 // console.log(result);
