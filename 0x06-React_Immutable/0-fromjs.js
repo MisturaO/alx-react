@@ -10,13 +10,14 @@ function getImmutableObject(object){
 }
 
 
-const object = {
-    fear: true,
-    smell: -1033575916.9145899,
-    wall: false,
-    thing: -914767132
-}
+//USAGE:
+// const object = {
+//     fear: true,
+//     smell: -1033575916.9145899,
+//     wall: false,
+//     thing: -914767132
+// }
 
-const immutableObject = getImmutableObject(object);
-console.log(immutableObject);
+// const immutableObject = getImmutableObject(object);
+// console.log(immutableObject);
 // console.log(immutableObject.toJS()); //converts immutable Map into to human readable format
