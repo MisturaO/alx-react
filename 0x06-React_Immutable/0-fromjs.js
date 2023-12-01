@@ -2,7 +2,7 @@ import { fromJS } from 'immutable';
 
 /* function getImmutableObject that accepts object as a parameter and converts
 it into an immutable Map using fromJS of the Immutable.js library */
-function getImmutableObject(object) {
+export default function getImmutableObject(object) {
   const immutableMap = fromJS(object);
 
   return immutableMap;
