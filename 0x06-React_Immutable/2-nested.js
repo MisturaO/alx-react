@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
 
-//This function returns the value of the object at the defined path
+// This function returns the value of the object at the defined path
 export default function accessImmutableObject(object, array) {
     // convert 'object' to immutable object
   const immutableObject = fromJS(object);
