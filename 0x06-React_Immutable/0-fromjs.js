@@ -19,4 +19,4 @@ const object = {
 
 const immutableObject = getImmutableObject(object);
 console.log(immutableObject);
-console.log(immutableObject.toJS());
+// console.log(immutableObject.toJS()); //converts immutable Map into to human readable format
