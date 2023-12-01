@@ -16,7 +16,7 @@ export default function accessImmutableObject(object, array) {
 //          last: "Salva"
 //     }
 // }, ['name', 'first']);
-// The second argument is the defined path the getIn method will traverse to get 
-//it's value. Returns 'undefined' if path doesn't exist.
+// The second argument is the defined path the getIn method will traverse to get
+// it's value. Returns 'undefined' if path doesn't exist.
 
 // console.log(result);
