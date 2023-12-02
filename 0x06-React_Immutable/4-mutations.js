@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 
 //  Creates an Immutable Map with the object passed into Map()
-const map = Map(
+export const map = Map(
   {
     1: 'Liam',
     2: 'Noah',
@@ -9,7 +9,7 @@ const map = Map(
     4: 'Oliver',
     5: 'Jacob',
     6: 'Lucas',
-  }
+  },
 );
 
 export const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
