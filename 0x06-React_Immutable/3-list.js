@@ -11,7 +11,7 @@ export function getListObject(array) {
 /* Accepts two arguments: first one is a List and second one is a string:
         append the string to the list and returns the list */
 export function addElementToList(list, element) {
-/*   const newListPush = list.push(element); // The push method mutates 
+/*   const newListPush = list.push(element); // The push method mutates
 the original array and returns the new length of the array instead */
   const newList = list.concat(element);
   return newList;
