@@ -12,7 +12,12 @@ const map = Map(
    }
 );
 
-export const map2 = map.set('2', 'Benjamin').set('4', 'Oliver');
+export const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
+
+// export const map2 = map.withMutations( m => {
+//     m.set('4', 'Oliver'),
+//     m.set('2', 'Benjamin')
+//   });
 
 // console.log(map2.toJS());
 // console.log(map2);
