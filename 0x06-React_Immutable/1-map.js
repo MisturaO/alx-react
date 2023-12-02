@@ -2,7 +2,7 @@
 import { Map } from 'immutable';
 
 // Converts object into Immutable Map
-const getImmutableObject = (object) => Map(object);
+export const getImmutableObject = (object) => Map(object);
 
 export default getImmutableObject;
 
