@@ -12,6 +12,7 @@ export const map = Map(
   },
 );
 
+// Modifies values at particular index...
 export const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
 
 // export const map2 = map.withMutations( m => {
