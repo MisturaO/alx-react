@@ -1,22 +1,22 @@
 import { List, Map } from 'immutable';
 
 // Returns a List containing the values of the two pages: Both are arrays
-export function concatElements(page1, page2){
+export function concatElements(page1, page2) {
   const array1 = List(page1);
   const array2 = List(page2);
   const concatenatedList = array1.concat(array2);
 
-  return(concatenatedList);
+  return concatenatedList;
 }
 
 /* Returns a List containing the values of the two pages: Both are objects:
     If two values are the same, page2 values should be used */
-export function mergeElements(page1, page2){
+export function mergeElements(page1, page2) {
   const obj1 = Map(page1);
   const obj2 = Map(page2);
   const mergedObjects = obj1.merge(obj2);
 
-  return(mergedObjects);
+  return mergedObjects;
 }
 
 // USAGE:
