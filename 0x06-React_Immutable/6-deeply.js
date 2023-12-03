@@ -2,7 +2,7 @@ import { Map } from 'immutable';
 
 /* Returns a List containing the values of the two pages: Both are objects.
         If two values are the same, they should combine each other */
-export default function mergeDeeplyElements(page1, page2){
+export default function mergeDeeplyElements(page1, page2) {
   const list1 = Map(page1);
   const list2 = Map(page2);
   const deepMergedList = list1.mergeDeep(list2);
