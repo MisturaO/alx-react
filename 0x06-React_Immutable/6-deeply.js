@@ -14,25 +14,25 @@ export default function mergeDeeplyElements(page1, page2){
 // const listB = { id: 2, value: 'b' };
 // console.log(mergeDeeplyElements(listA, listB).toJS());
 
-const listA = {
-    'user-1': {
-      id: 1,
-      name: 'test',
-      likes: {
-        1: {
-          uid: 1234,
-        }
-      }
-    },
-  };
+// const listA = {
+//     'user-1': {
+//       id: 1,
+//       name: 'test',
+//       likes: {
+//         1: {
+//           uid: 1234,
+//         }
+//       }
+//     },
+//   };
   
-  const listB = {
-    'user-1': {
-      likes: {
-        2: {
-          uid: 134,
-        }
-      }
-    },
-  };
-console.log(mergeDeeplyElements(listA, listB).toJS());
+//   const listB = {
+//     'user-1': {
+//       likes: {
+//         2: {
+//           uid: 134,
+//         }
+//       }
+//     },
+//   };
+// console.log(mergeDeeplyElements(listA, listB).toJS());
