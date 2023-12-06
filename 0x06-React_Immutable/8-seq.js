@@ -16,7 +16,7 @@ export default function printBestStudents(obj) {
     lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.slice(1)
     })).toObject();
 
-    console.log(filtererdObj);
+  console.log(filtererdObj);
 }
 
 // const grades = {
