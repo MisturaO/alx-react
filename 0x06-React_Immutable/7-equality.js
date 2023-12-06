@@ -1,4 +1,4 @@
-import { Map } from 'immutable';
+import { is, Map } from 'immutable';
 
 /* Accepts two arguments map1 and map2. Both are Immutable.js Maps:
         It should return 'true' if the Maps are equal*/
@@ -6,7 +6,7 @@ export function areMapsEqual(map1, map2) {
     const mapA = Map(map1);
     const mapB = Map(map2);
 
-    return mapA.equals(mapB);
+    return is(mapA, mapB);
 }
 
 // USAGE:
