@@ -14,7 +14,7 @@ export default function printBestStudents(obj) {
     ...x,
     firstName: x.firstName.charAt(0).toUpperCase() + x.firstName.slice(1),
     lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.slice(1)
-    }));
+    })).toObject();
 
     console.log(filtererdObj);
 }
