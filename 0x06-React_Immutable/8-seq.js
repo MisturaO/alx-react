@@ -19,19 +19,18 @@ export default function printBestStudents(obj) {
     console.log(filtererdObj);
 }
 
-const grades = {
-    1: {
-      score: 99,
-      firstName: 'guillaume',
-      lastName: 'salva',
-    },
-    2: {
-        score: 60,
-        firstName: 'Nana',
-        lastName: 'alva',
-      }
-  };
+// const grades = {
+//     1: {
+//       score: 99,
+//       firstName: 'guillaume',
+//       lastName: 'salva',
+//     },
+//     2: {
+//         score: 60,
+//         firstName: 'Nana',
+//         lastName: 'alva',
+//       }
+//   };
 
-// USAGE:
-printBestStudents(grades);
-// console.log(result.toJS());
+// // USAGE:
+// printBestStudents(grades);
