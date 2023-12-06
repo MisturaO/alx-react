@@ -14,24 +14,24 @@ export default function printBestStudents(obj) {
     ...x,
     firstName: x.firstName.charAt(0).toUpperCase() + x.firstName.slice(1),
     lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.slice(1)
-    })).toObject();
+    }));
 
     return filtererdObj;
 }
 
-// const grades = {
-//     1: {
-//       score: 99,
-//       firstName: 'guillaume',
-//       lastName: 'salva',
-//     },
-//     2: {
-//         score: 60,
-//         firstName: 'Nana',
-//         lastName: 'alva',
-//       }
-//   };
+const grades = {
+    1: {
+      score: 99,
+      firstName: 'guillaume',
+      lastName: 'salva',
+    },
+    2: {
+        score: 60,
+        firstName: 'Nana',
+        lastName: 'alva',
+      }
+  };
 
-// // USAGE:
-// const result = printBestStudents(grades);
-// console.log(result);
+// USAGE:
+const result = printBestStudents(grades);
+console.log(result.toJS());
